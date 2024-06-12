@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "collections",
+  "info": {
+    "singularName": "collection",
+    "pluralName": "collections",
+    "displayName": "Collection",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "collection_name": {
+      "type": "string"
+    },
+    "collection_img": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "flowers": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::flower.flower",
+      "mappedBy": "collections"
+    }
+  }
+}
